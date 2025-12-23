@@ -1,3 +1,4 @@
+```
 Appscrip-task-candidate-name/
 ├── public/
 │   ├── index.html
@@ -13,6 +14,7 @@ Appscrip-task-candidate-name/
 │   │   ├── ProductGrid.css
 │   │   ├── ProductCard.js
 │   │   ├── ProductCard.css
+|   |   ├── ShortDropdown.js
 │   │   ├── Footer.js
 │   │   └── Footer.css
 │   ├── App.js
@@ -22,3 +24,4 @@ Appscrip-task-candidate-name/
 ├── package.json
 ├── README.md
 └── .gitignore
+```
