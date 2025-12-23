@@ -10,8 +10,6 @@ const Footer = () => {
   const upArrow = <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0.625196 0.625L6.05853 6.05833C6.7002 6.7 7.7502 6.7 8.39186 6.05833L13.8252 0.625" stroke="white" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
   </svg>
-
-  const downArrow = <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M0.499998 0.500022L4.84666 4.84669C5.36 5.36002 6.2 5.36002 6.71333 4.84669L11.06 0.500022" stroke="#292D32" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" /> </svg>
   return (
     <footer className="mm-footer">
       <div className="mm-footer-top">
