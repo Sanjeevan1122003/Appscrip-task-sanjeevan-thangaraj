@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 import './App.css';
 import Header from './components/Header';
 import Filters from './components/Filters';
@@ -27,7 +27,7 @@ function App() {
 
   useEffect(() => {
     applyFilters();
-  }, [filters, products]);
+  }, [filters, products, applyFilters]);
 
   const fetchProducts = async () => {
     try {
