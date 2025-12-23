@@ -1,0 +1,303 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Simplon Norm", "Inter", sans-serif;
+  background: #ffffff;
+  color: #252020;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.main-container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+
+.page-header {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 56px 0 40px;
+}
+
+.page-header h1 {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.page-header p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.mobile-content {
+  display: none;
+}
+
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+
+.filters-sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+
+.products-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: -20px;
+}
+
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0px;
+
+  border-bottom: 1px solid #e5e7eb;
+  border-top: 1px solid #e5e7eb;
+  width: 100%;
+}
+
+.products-header h2 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.products-header>div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.products-header span {
+  font-size: 14px;
+  color: #555;
+}
+
+
+.sort-wrapper {
+  position: relative;
+  width: 220px;
+  font-family: inherit;
+}
+
+.sort-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.sort-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  z-index: 999;
+  text-align: right;
+}
+
+.sort-tittle{
+  margin-right: 20px;
+}
+
+.sort-option {
+  padding: 12px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+}
+
+.sort-option:hover {
+  background: #f9fafb;
+}
+
+.sort-option.active {
+  font-weight: 600;
+}
+
+.check {
+  font-size: 14px;
+}
+
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+
+.loading,
+.no-results {
+  text-align: center;
+  padding: 60px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.clear-filters-btn {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background: #252020;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+.mobile-toolbar {
+  display: none;
+}
+
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-content {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0;
+    font-weight: 600;
+  }
+
+  .mobile-content-home {
+    border-right: 2px solid #BFC8CD;
+    color: #BFC8CD;
+    padding-right: 15px;
+
+  }
+
+  .mobile-content-home p {
+    color: #cfd1d2;
+  }
+
+  .mobile-content-shop {
+    color: #252020;
+    padding-left: 15px;
+  }
+
+  .main-container {
+    width: 100vw;
+  }
+
+  .page-header {
+    padding: 20px 0;
+    width: 343px;
+    margin-left: -20px;
+  }
+
+  .page-header h1 {
+    font-size: 24px;
+  }
+
+  .products-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .sort-wrapper{
+    width: 180px;
+  }
+
+  
+  .mobile-toolbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    z-index: 900;
+    width: 98vw;
+    margin-left: -19px;
+  }
+
+  .mobile-toolbar button,
+  .mobile-toolbar select {
+    flex: 1;
+    padding: 14px;
+    font-weight: 600;
+    background: none;
+    border: none;
+  }
+
+  .divider {
+    width: 1px;
+    background: #ddd;
+  }
+
+  .mobile-toolbar {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
