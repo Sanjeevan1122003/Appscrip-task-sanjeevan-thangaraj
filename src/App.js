@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Filters from './components/Filters';
@@ -26,8 +26,20 @@ function App() {
   }, []);
 
   useEffect(() => {
-    applyFilters();
-  }, [filters, products, applyFilters]);
+    const applyFilters = () => {
+      let result = [...products];
+
+      // Category filter
+      if (filters.category !== 'all') {
+        result = result.filter(product =>
+          product.category.toLowerCase().includes(filters.category.toLowerCase())
+        );
+      }
+
+      setFilteredProducts(result);
+    };
+    applyFilters()
+  }, [filters, products]);
 
   const fetchProducts = async () => {
     try {
@@ -52,19 +64,6 @@ function App() {
     } finally {
       setLoading(false);
     }
-  };
-
-  const applyFilters = () => {
-    let result = [...products];
-
-    // Category filter
-    if (filters.category !== 'all') {
-      result = result.filter(product =>
-        product.category.toLowerCase().includes(filters.category.toLowerCase())
-      );
-    }
-
-    setFilteredProducts(result);
   };
 
   const updateFilters = (newFilters) => {
